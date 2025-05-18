@@ -41,8 +41,6 @@ int main() {
     * DAY 1
     *
     // Sort
-    // Technically not needed for day 2, but simplifies the processes
-    // and there is no need to comment out and rewrite some sections
     qsort(left_list, LINES, sizeof(int), Compare_Int);
     qsort(right_list, LINES, sizeof(int), Compare_Int);
 
@@ -52,6 +50,7 @@ int main() {
     }
     */
     
+    // Compare list and calculate score
     for (int i = 0; i < LINES; i++) {
         similarity = 0;
         for (int j = 0; j < LINES; j++) {
@@ -65,6 +64,7 @@ int main() {
     // Output
     printf("Total score: %d\n", score);
 
+    // Cleanup
     fclose(file);
     free(left_list);
     free(right_list);
