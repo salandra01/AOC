@@ -1,0 +1,2 @@
+#CLI compile flags, etc.
+gcc [file].c -o [out_file] -Werror -Wpedantic -Wall
